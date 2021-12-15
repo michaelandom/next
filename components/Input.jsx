@@ -21,7 +21,7 @@ function Input() {
     };
     
     const sendPost=()=>{};
-const addImageToPost=()=>{};
+   
 
   return (
     <div
