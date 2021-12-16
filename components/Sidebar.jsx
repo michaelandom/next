@@ -39,7 +39,7 @@ function Sidebar() {
           imageSrc={session.user.image}
            style="w-10 h-10 rounded-full xl:mr-2.5"
         />
-        .
+        
         <div className="hidden xl:inline leading-5" onClick={signOut} >
           <h4 className="font-bold text-white">{session.user.name}</h4>
           <p className="text-[#d9d9d9]">{"@" + session.user.tag}</p>
