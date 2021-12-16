@@ -25,7 +25,7 @@ function Input() {
   const [input, setInput] = useState("");
   const [shoeEmojis, setShoeEmojis] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [selectedFile, setselectedFile] = useState(null);
+  const [selectedFile, setSelectedFile] = useState(null);
   const filePickerRef = useRef("");
   const addImageToPost = (e) => {
 
@@ -35,7 +35,7 @@ reader.readAsDataURL(e.target.files[0]);
  }
 
  reader.onload=(readerEvent) =>{
-   setselectedFile(readerEvent.target.result);
+   setSelectedFile(readerEvent.target.result);
  }
 
   };
@@ -73,7 +73,7 @@ reader.readAsDataURL(e.target.files[0]);
 
     setLoading(false);
     setInput("");
-    setselectedFile(null);
+    setSelectedFile(null);
     setShoeEmojis(false);
   };
 
@@ -99,7 +99,7 @@ reader.readAsDataURL(e.target.files[0]);
           <div className='relative'>
             <div
               className='absolute w-8 h-9 bg-[#15181c] hover:bg-[#272c26] bg-opacity-75 rounded-full flex items-center justify-center top-1 left-1 cursor-pointer'
-              onClick={() => setselectedFile(null)}>
+              onClick={() => setSelectedFile(null)}>
               <XIcon className='text-white h-5 ' />
             </div>
             <img
