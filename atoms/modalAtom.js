@@ -16,3 +16,7 @@ export const setIsClosedData=atom({
     key:"setIsClosedData",
     default:false,
 });
+export const setIsXlData=atom({
+    key:"setIsXlData",
+    default:false,
+});

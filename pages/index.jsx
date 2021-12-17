@@ -6,13 +6,14 @@ import Login from '../components/Login'
 import { useRecoilState } from "recoil";
 import { useState,useEffect } from "react";
 
-import { setIsClosedData } from "../atoms/modalAtom";
+import { setIsClosedData,setIsXlData } from "../atoms/modalAtom";
 
 export default function Home({trendingResult,followResult,providers}) {
   const { data: session } = useSession()
 
  
  const [isClosed, setIsClosed] = useRecoilState(setIsClosedData);
+ const [isXl, setIsXl] = useRecoilState(setIsXlData);
 
  const [screenSize, getDimension] = useState({
   dynamicWidth:typeof window !== "undefined" && window.innerWidth,
@@ -20,8 +21,13 @@ export default function Home({trendingResult,followResult,providers}) {
 });
 
 const setDimension = () => {
-  if(window.innerWidth>550 && isClosed){
+  if(window.innerWidth>640 && isClosed){
     setIsClosed(false);
+  }
+  if(window.innerWidth>=1280 ){
+    setIsXl(true);
+  }else{
+    setIsXl(false);
   }
   getDimension({
     dynamicWidth:typeof window !== "undefined" && window.innerWidth,
