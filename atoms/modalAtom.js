@@ -12,3 +12,7 @@ export const sideBarState=atom({
     key:"sideBarState",
     default:"Home",
 });
+export const setIsClosedData=atom({
+    key:"setIsClosedData",
+    default:false,
+});
