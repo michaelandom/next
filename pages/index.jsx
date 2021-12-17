@@ -6,10 +6,12 @@ import Login from '../components/Login'
 import { useRecoilState } from "recoil";
 import { useState,useEffect } from "react";
 
-import { setIsClosedData,setIsXlData } from "../atoms/modalAtom";
+import { setIsClosedData,setIsXlData,modalState } from "../atoms/modalAtom";
+import Modal from '../components/Modal'
 
 export default function Home({trendingResult,followResult,providers}) {
   const { data: session } = useSession()
+  const [isOpen, setIsOpen] = useRecoilState(modalState);
 
  
  const [isClosed, setIsClosed] = useRecoilState(setIsClosedData);
@@ -58,6 +60,8 @@ useEffect(() => {
       <Feed />
       {/* widgets   */}
       {/* modal   */}
+     {isOpen && <Modal />}
+
       { isClosed && <div className=' inset-0 fixed bg-black max-w-[300px]  z-50 min-h-screen'>
       <Sidebar />
    </div>   
