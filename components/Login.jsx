@@ -12,7 +12,7 @@ function Login({ providers }) {
       />
       <div>
         {Object.values(providers).map((provider) => (
-          <div key={provider.name}>
+          <div key={provider.name} className="mt-2">
             <button
               onClick={() => signIn(provider.id, { callbackUrl: "/" })}
               className="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group"

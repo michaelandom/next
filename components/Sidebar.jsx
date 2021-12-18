@@ -24,7 +24,7 @@ function Sidebar() {
   const [isClosed, setIsClosed] = useRecoilState(setIsClosedData);
   return (
     //w-[300px] border-r ml-6 ml-10 ml-24
-    <div className={`${!isClosed ? "hidden sm:flex" : "w-[300px]  overflow-y-scroll"}   flex-col   items-center xl:items-start xl:w-[340px] p-2 fixed h-full`}>
+    <div className={`${!isClosed ? "hidden sm:flex" : "w-[300px]  overflow-y-scroll"} border-gray-700   flex-col   items-center xl:items-start xl:w-[340px] p-2 fixed h-full`}>
      <div className="flex items-center justify-between w-full">
      <div className="flex items-center justify-center w-14 h-14 hoverAnimation p-0 xl:ml-24">
         <Image src="https://rb.gy/ogau5a" alt="" width={30} height={30} />

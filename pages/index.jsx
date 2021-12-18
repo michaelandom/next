@@ -8,6 +8,7 @@ import { useState,useEffect } from "react";
 
 import { setIsClosedData,setIsXlData,modalState } from "../atoms/modalAtom";
 import Modal from '../components/Modal'
+import Example from '../components/Tabs'
 
 export default function Home({trendingResult,followResult,providers}) {
   const { data: session } = useSession()
@@ -58,6 +59,7 @@ useEffect(() => {
       <Sidebar />
      
       <Feed />
+      <Example />
       {/* widgets   */}
       {/* modal   */}
      {isOpen && <Modal />}
