@@ -22,6 +22,7 @@ import Login from "../components/Login";
 import ProfileImageComp from "../components/ProfileImageComp";
 import Moment from "react-moment";
 import { Comment } from "../components/Comment";
+import { Widgets } from "../components/Widgets";
 const PostPage = ({ trendingResult, followResult, providers }) => {
   const { data: session } = useSession();
 
@@ -86,7 +87,7 @@ const PostPage = ({ trendingResult, followResult, providers }) => {
             </div>
           )}
         </div>
-
+        <Widgets trendingResult ={trendingResult} followResult={followResult}/>
         {/* widgets   */}
         {/* modal   */}
         {isOpen && <Modal />}
